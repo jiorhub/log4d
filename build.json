@@ -1,0 +1,31 @@
+{
+    "name": "log4d",
+    "default": "hello",
+    "basedir": ".",
+
+    "properties": {
+        "src.dir": {
+            "location": "src"
+        },
+        "build.dir": {
+            "location": "build"
+        }
+    },
+
+    "targets": {
+        "init": {
+            "mkdir": {
+                "dir": "build"
+            }
+        },
+        "build": {
+            "echo": "Build project",
+            "dmd": {
+                "destdir": "build",
+                "src": [
+                    {"path": "src"}
+                ]
+            }
+        }
+    }
+}
